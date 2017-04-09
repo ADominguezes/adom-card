@@ -1,0 +1,112 @@
+:host([hidden]) {
+    display: none;
+}
+:host {
+  display: block;
+  box-sizing: border-box;
+  background-color: var(--adom-card-bg-color, #fff);
+  @apply(--adom-card);
+  .header {
+    border-bottom: 1px solid var(--adom-card-header-border-color, #ededed);
+    width: 100%;
+    padding:1em;
+    box-sizing: border-box;
+    background-color: var(--adom-card-header-bg-color, #fff);
+    color: var(--adom-card-header-color, #414244);
+    @apply(--adom-card-header);
+    &__heading {
+      font-size: 1.4em;
+      color: var(--adom-card-header-heading-color, #414244);
+      @apply(--adom-card-header-heading);
+    }
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    padding: 0.5em;
+    box-sizing: border-box;
+    background-color: var(--adom-card-body-bg-color, #fff);
+    color: var(--adom-card-body-color, #414244);
+    @apply(--adom-card-body);
+    &__media {
+      width: 50%;
+      @apply(--adom-card-body-media);
+    }
+    &__content {
+      width: 50%;
+      padding: 1em;
+      color: var(--adom-card-body-content-color, #666768);
+      @apply(--adom-card-body-content);
+      &__heading {
+        font-size: 1.4em;
+        color: var(--adom-card-header-heading-color, #414244);
+        @apply(--adom-card-body-content-heading);
+      }
+      &__subheading {
+        padding: 0;
+        font-size: 1.2em;
+        color: var(--adom-card-body-content-subheading-color, #1081C2);
+        @apply(--adom-card-body-content-subheading);
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    padding: 0.5em;
+    border-top: 1px solid var(--adom-card-footer-border-color, #ededed);
+    box-sizing: border-box;
+    color: var(--adom-card-footer-color, #666768);
+    background-color: var(--adom-card-footer-bg-color, #fff);
+    @apply(--adom-card-footer);
+  }
+}
+
+:host([with-shadow]) {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    @apply(--adom-card-with-shadow);
+}
+
+:host([no-media]) {
+  .body {
+    &__content {
+      width: 100%;
+      padding: 1em;
+    }
+  }
+}
+:host([no-header]) {
+  .body {
+    padding:0;
+    &__content {
+      &__subheading {
+        padding: 0.5em 0;
+      }
+    }
+  }
+}
+:host([column]) {
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    &__media {
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+  }
+}
+:host([reverse]) {
+  .body {
+    flex-direction: row-reverse;
+  }
+}
+:host([reverse]):host([column]) {
+  .body {
+    flex-direction: column-reverse;
+  }
+}

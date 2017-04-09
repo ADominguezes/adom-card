@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>adom-card demo</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+    window.Polymer = {
+      dom: 'shadow',
+      lazyRegister: 'true',
+      useNativeCSSProperties: 'true'
+    }
+  </script>
+
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../bower_components/adom-demo/adom-demo.html">
+  <link rel="import" href="../adom-card.html">
+
+  <style is="custom-style" include="demo-pages-shared-styles">
+    /*Common styles*/
+    
+    .component-info {
+      padding: 1em;
+    }
+    
+    .adom-card {
+      color: #3e3e3e;
+    }
+    
+    .component-description {
+      color: #999;
+    }
+    
+    demo-snippet {
+      --demo-snippet-demo: {
+        display: block;
+      }
+      ;
+    }
+  </style>
+</head>
+
+<body>
+  <adom-demo id="demo" option-selected="0">
+    <div>
+      <div class="component-info">
+        <h2 class="adom-card">Basic adom-card demo</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <style is="custom-style">
+            .card-footer {
+              text-align: right;
+            }
+            
+            button {
+              background-color: #1081C2;
+              padding: 10px;
+              font-size: 1em;
+              color: #fff;
+              border: none;
+            }
+          </style>
+          <adom-card heading="Lorem ipsum" img-url="http://lorempixel.com/600/400/" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+            with-shadow>
+            <div class="card-footer">
+              <button class="button">
+                Leer más
+              </button>
+            </div>
+            <div class="card-body">
+              <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan eu blandit
+                a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat quam cursus.
+                Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur. Mauris varius sapien
+                vel sem aliquet, eget gravida mauris vestibulum.</p>
+              <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan eu blandit
+                a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat quam cursus.
+                Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur. Mauris varius sapien
+                vel sem aliquet, eget gravida mauris vestibulum.</p>
+            </div>
+          </adom-card>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-card">Without header and without footer</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <adom-card img-url="http://lorempixel.com/600/400/" heading="Lorem ipsum" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+            with-shadow no-header no-footer>
+            <div class="card-body">
+              <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan eu blandit
+                a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat quam cursus.
+                Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur. Mauris varius sapien
+                vel sem aliquet, eget gravida mauris vestibulum.</p>
+            </div>
+          </adom-card>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-card">Without media, content in header, body and footer</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <style is="custom-style">
+            .custom {
+              --adom-card-header-bg-color: #d9edf7;
+            }
+            
+            button {
+              background-color: #1081C2;
+              padding: 10px;
+              font-size: 1em;
+              color: #fff;
+              border: none;
+              margin: 0.2em;
+            }
+            
+            textarea {
+              border: 1px solid #ababab;
+              padding: 10px;
+              width: 100%;
+              font-size: 1em;
+              box-sizing: border-box;
+            }
+          </style>
+          <adom-card class="custom" with-shadow no-media>
+            <div class="card-header">
+              <button class="button">
+                Config
+              </button>
+              <button class="button">
+                User
+              </button>
+            </div>
+            <div class="card-body">
+              <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan eu blandit
+                a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat quam cursus.
+                Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur. Mauris varius sapien
+                vel sem aliquet, eget gravida mauris vestibulum.</p>
+            </div>
+            <div class="card-footer">
+              <textarea rows="4"></textarea>
+            </div>
+          </adom-card>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-card">Column without footer</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <adom-card heading="Lorem ipsum" img-url="http://lorempixel.com/600/400/" with-shadow column subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." no-footer>
+          </adom-card>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-card">Reverse body content</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <adom-card heading="Lorem ipsum" video-url="https://vimeo.com/204400073" with-shadow subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." no-footer no-header reverse>
+          </adom-card>
+        </template>
+      </demo-snippet>
+    </div>
+  </adom-demo>
+  <script>
+    var menu = [
+      { optionName: 'Basic component' },
+      { optionName: 'Without header and without footer' },
+      { optionName: 'Without media, content in header, body and footer' },
+      { optionName: 'Column without footer' },
+      { optionName: 'Reverse body content' }
+    ];
+    var demo = document.getElementById('demo');
+    demo.optionsMenu = menu;
+  </script>
+</body>
+
+</html>
