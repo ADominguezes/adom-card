@@ -10,7 +10,7 @@
     "adom-media": "https://github.com/ADominguezes/adom-media.git"
   },
   "devDependencies": {
-    "adom-demo": "https://github.com/ADominguezes/adom-demo.git#^0.0.2",
+    "adom-demo": "https://github.com/ADominguezes/adom-demo.git#^1.0.1",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "Polymer/web-component-tester#^4.0.0",
