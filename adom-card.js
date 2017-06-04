@@ -36,13 +36,27 @@
        * width for image
        */
       imgWidth: {
-        type: Number
+        type: Number,
+        observer: '_setResponsive'
       },
       /**
        * height for image
        */
       imgHeight: {
-        type: Number
+        type: Number,
+        observer: '_setResponsive'
+      },
+      /**
+       * circle for image
+       */
+      circle: {
+        type: Boolean
+      },
+      /**
+       * with image responsive
+       */
+      responsive: {
+        type: Boolean
       },
       /**
        * If it's true the body card's composition is in vertical direction
@@ -118,6 +132,14 @@
       } else {
         headingBody.setAttribute('role', 'heading');
         headingBody.setAttribute('aria-level', this.ariaHeadingLevel);
+      }
+    },
+    _setResponsive: function() {
+      var adomMedia = this.$$('#adomMedia');
+      if (this.imgWidth && this.imgWidth) {
+        adomMedia.responsive = false;
+      } else {
+        adomMedia.responsive = true;
       }
     }
 

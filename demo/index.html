@@ -25,23 +25,10 @@
   <style is="custom-style" include="demo-pages-shared-styles">
     /*Common styles*/
 
-    .component-info {
-      padding: 1em;
-    }
-
-    .adom-card {
-      color: #3e3e3e;
-    }
-
-    .component-description {
-      color: #999;
-    }
-
     demo-snippet {
       --demo-snippet-demo: {
         display: block;
-      }
-      ;
+      };
     }
 
   </style>
@@ -50,7 +37,7 @@
 <body>
   <adom-demo id="demo" option-selected="0">
     <demo-snippet id="view0" data-heading="Basic" data-description="Basic adom-card demo">
-      <template>
+      <template is="dom-bind">
         <style is="custom-style">
           .card-footer {
             text-align: right;
@@ -64,8 +51,13 @@
             border: none;
           }
 
+          #component0 {
+            --adom-card-body-media-width: 100px;
+            --adom-card-body-content-width: calc(100% - var(--adom-card-body-media-width));
+          }
+
         </style>
-        <adom-card heading="Lorem ipsum" img-url="http://lorempixel.com/600/400/" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...">
+        <adom-card id="component0" heading="Lorem ipsum" img-url="http://lorempixel.com/600/400/" img-height="100" img-width="100" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...">
           <div class="card-footer">
             <button class="button">
                 Leer más
@@ -87,7 +79,7 @@
       </template>
     </demo-snippet>
     <demo-snippet id="view1" data-heading="Without header and without footer">
-      <template>
+      <template is="dom-bind">
         <adom-card img-url="http://lorempixel.com/600/400/" heading="Lorem ipsum" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
           with-shadow no-header no-footer>
           <div class="card-body">
@@ -101,7 +93,7 @@
       </template>
     </demo-snippet>
     <demo-snippet id="view2" data-heading="Without media, content in header, body and footer" data-description="this is a reserved space for a description">
-      <template>
+      <template is="dom-bind">
         <style is="custom-style">
           .custom {
             --adom-card-header-bg-color: #d9edf7;
@@ -148,14 +140,14 @@
       </template>
     </demo-snippet>
     <demo-snippet id="view3" data-heading="Column without footer" data-description="this is a reserved space for a description">
-      <template>
+      <template is="dom-bind">
         <adom-card heading="Lorem ipsum" img-url="http://lorempixel.com/600/400/" with-shadow column subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
           no-footer>
         </adom-card>
       </template>
     </demo-snippet>
     <demo-snippet id="view4" data-heading="Reverse body content" data-description="this is a reserved space for a description">
-      <template>
+      <template is="dom-bind">
         <adom-card heading="Lorem ipsum" video-url="https://vimeo.com/204400073" with-shadow subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
           no-footer no-header reverse>
         </adom-card>

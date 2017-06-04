@@ -71,19 +71,22 @@ The following custom properties and mixins are available for styling:
 | --adom-card-footer                   | empty mixin for :host .footer                      | {}           |
 | --adom-card-with-shadow              | empty mixin for :host([with-shadow])               | {}           |
 
-| Custom property                             | Description                  | Default |
-|:--------------------------------------------|:-----------------------------|:-------:|
-| --adom-card-bg-color                        | background color for :host   | #fff    |
-| --adom-card-header-border-color             | border color for header      | #ededed |
-| --adom-card-header-bg-color                 | background color for header  | #fff    |
-| --adom-card-header-heading-color            | color for heading            | #414244 |
-| --adom-card-body-bg-color                   | background color for body    | #fff    |
-| --adom-card-body-color                      | color for body               | #414244 |
-| --adom-card-body-content-color              | color for content            | #666768 |
-| --adom-card-body-content-subheading-color   | color for subheading         | #1081C2 |
-| --adom-card-footer-border-color             | border color for footer      | #ededed |
-| --adom-card-footer-color                    | color for footer             | #666768 |
-| --adom-card-footer-bg-color                 | background color for footer  | #fff    |
+| Custom property                               | Description                  | Default |
+|:----------------------------------------------|:-----------------------------|:-------:|
+| --adom-card-bg-color                          | background color for :host   | #fff    |
+| --adom-card-header-border-color               | border color for header      | #ededed |
+| --adom-card-header-bg-color                   | background color for header  | #fff    |
+| --adom-card-header-heading-color              | color for heading            | #414244 |
+| --adom-card-body-bg-color                     | background color for body    | #fff    |
+| --adom-card-body-color                        | color for body               | #414244 |
+| --adom-card-body-content-color                | color for content            | #666768 |
+| --adom-card-body-content-subheading-color     | color for subheading         | #1081C2 |
+| --adom-card-body-content-subheading-font-size | font-size for subheading     |1.2em    |
+| --adom-card-footer-border-color               | border color for footer      | #ededed |
+| --adom-card-footer-color                      | color for footer             | #666768 |
+| --adom-card-footer-bg-color                   | background color for footer  | #fff    |
+| --adom-card-body-media-width                  | width for card media         | 50%     |
+| --adom-card-body-content-width                | width for content media      | 50%     |
 
 ## Using the quickly starter kit for a polymer element
 
