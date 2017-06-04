@@ -23,56 +23,61 @@
        */
       imgUrl: {
         type: String,
-        notify: true,
-        reflectToAttribute: true
+        notify: true
       },
       /**
        * Show when use an video url from youtube or vimeo
        */
       videoUrl: {
         type: String,
-        notify: true,
-        reflectToAttribute: true
+        notify: true
       },
       /**
-       * If it's true the body card's composition is in vertical direction 
+       * width for image
+       */
+      imgWidth: {
+        type: Number
+      },
+      /**
+       * height for image
+       */
+      imgHeight: {
+        type: Number
+      },
+      /**
+       * If it's true the body card's composition is in vertical direction
        */
       column: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        value: false
       },
       /**
        * Change the order of the body card
        */
       reverse: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        value: false
       },
       /**
        * If it's true don't show the header of the card
        */
       noHeader: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        value: false
       },
       /**
        * If it's true, don't show the footer of the card
        */
       noFooter: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        value: false
       },
       /**
        * If it's true don't show the image or the video of the card
        */
       noMedia: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        value: false
       },
       /**
        * Aria heading of the card
